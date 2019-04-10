@@ -17,5 +17,7 @@ from django.contrib import admin
 from django.urls import path
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    #path('poll0/', poll_list)
+    path('poll/', PollList.as_view()),
+    path('poll/<int:pk>/', PollDetail.as_view())
 ]
